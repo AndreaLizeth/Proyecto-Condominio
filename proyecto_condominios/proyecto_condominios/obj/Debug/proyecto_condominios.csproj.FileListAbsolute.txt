@@ -1,0 +1,9 @@
+C:\Users\Usuario\Desktop\JESSICA\SEMESTRES\Semestre 6\ANALISIS DISEÑO SISTEMAS INFORMATICOS\APLICACION_CONDOMINIOS\proyecto_condominios\proyecto_condominios\bin\Debug\proyecto_condominios.exe.config
+C:\Users\Usuario\Desktop\JESSICA\SEMESTRES\Semestre 6\ANALISIS DISEÑO SISTEMAS INFORMATICOS\APLICACION_CONDOMINIOS\proyecto_condominios\proyecto_condominios\bin\Debug\proyecto_condominios.exe
+C:\Users\Usuario\Desktop\JESSICA\SEMESTRES\Semestre 6\ANALISIS DISEÑO SISTEMAS INFORMATICOS\APLICACION_CONDOMINIOS\proyecto_condominios\proyecto_condominios\bin\Debug\proyecto_condominios.pdb
+C:\Users\Usuario\Desktop\JESSICA\SEMESTRES\Semestre 6\ANALISIS DISEÑO SISTEMAS INFORMATICOS\APLICACION_CONDOMINIOS\proyecto_condominios\proyecto_condominios\obj\Debug\proyecto_condominios.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\JESSICA\SEMESTRES\Semestre 6\ANALISIS DISEÑO SISTEMAS INFORMATICOS\APLICACION_CONDOMINIOS\proyecto_condominios\proyecto_condominios\obj\Debug\proyecto_condominios.Properties.Resources.resources
+C:\Users\Usuario\Desktop\JESSICA\SEMESTRES\Semestre 6\ANALISIS DISEÑO SISTEMAS INFORMATICOS\APLICACION_CONDOMINIOS\proyecto_condominios\proyecto_condominios\obj\Debug\proyecto_condominios.csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\JESSICA\SEMESTRES\Semestre 6\ANALISIS DISEÑO SISTEMAS INFORMATICOS\APLICACION_CONDOMINIOS\proyecto_condominios\proyecto_condominios\obj\Debug\proyecto_condominios.exe
+C:\Users\Usuario\Desktop\JESSICA\SEMESTRES\Semestre 6\ANALISIS DISEÑO SISTEMAS INFORMATICOS\APLICACION_CONDOMINIOS\proyecto_condominios\proyecto_condominios\obj\Debug\proyecto_condominios.pdb
+C:\Users\Usuario\Desktop\JESSICA\SEMESTRES\Semestre 6\ANALISIS DISEÑO SISTEMAS INFORMATICOS\APLICACION_CONDOMINIOS\proyecto_condominios\proyecto_condominios\obj\Debug\proyecto_condominios.Login.resources
