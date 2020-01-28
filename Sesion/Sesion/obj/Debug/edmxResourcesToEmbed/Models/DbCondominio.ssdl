@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TADSICondominiumModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="apartments">
+    <Key>
+      <PropertyRef Name="apartmentId" />
+    </Key>
+    <Property Name="apartmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="buildingId" Type="int" />
+    <Property Name="apartmentNumber" Type="int" Nullable="false" />
+    <Property Name="residentsNumber" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="buildings">
+    <Key>
+      <PropertyRef Name="buildingId" />
+    </Key>
+    <Property Name="buildingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="buildingdName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="buildingDescription" Type="varchar" MaxLength="500" />
+    <Property Name="buildingWaterReturnValue" Type="float" />
+  </EntityType>
+  <EntityType Name="complains">
+    <Key>
+      <PropertyRef Name="complainId" />
+    </Key>
+    <Property Name="complainId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userId" Type="int" />
+    <Property Name="complainDescription" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="complainDate" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="fees">
+    <Key>
+      <PropertyRef Name="feeId" />
+    </Key>
+    <Property Name="feeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="buildingId" Type="int" />
+    <Property Name="feeDescription" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="feeValue" Type="float" Nullable="false" />
+    <Property Name="feeLimitDate" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="payments">
+    <Key>
+      <PropertyRef Name="paymentId" />
+    </Key>
+    <Property Name="paymentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="apartmentId" Type="int" />
+    <Property Name="paymentValue" Type="float" Nullable="false" />
+    <Property Name="paymentType" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="userId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="apartmentId" Type="int" />
+    <Property Name="userName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="userLastName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="userIdentificationCard" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="userEmail" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="userPassword" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="userType" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="visits">
+    <Key>
+      <PropertyRef Name="visitId" />
+    </Key>
+    <Property Name="visitId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="apartmentId" Type="int" />
+    <Property Name="visitName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="visitLastName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="visitIdentificationCard" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="visitDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__apartment__build__4BAC3F29">
+    <End Role="buildings" Type="Self.buildings" Multiplicity="0..1" />
+    <End Role="apartments" Type="Self.apartments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="buildings">
+        <PropertyRef Name="buildingId" />
+      </Principal>
+      <Dependent Role="apartments">
+        <PropertyRef Name="buildingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__complains__userI__59FA5E80">
+    <End Role="users" Type="Self.users" Multiplicity="0..1" />
+    <End Role="complains" Type="Self.complains" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="complains">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fees__buildingId__5165187F">
+    <End Role="buildings" Type="Self.buildings" Multiplicity="0..1" />
+    <End Role="fees" Type="Self.fees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="buildings">
+        <PropertyRef Name="buildingId" />
+      </Principal>
+      <Dependent Role="fees">
+        <PropertyRef Name="buildingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__payments__apartm__5441852A">
+    <End Role="apartments" Type="Self.apartments" Multiplicity="0..1" />
+    <End Role="payments" Type="Self.payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="apartments">
+        <PropertyRef Name="apartmentId" />
+      </Principal>
+      <Dependent Role="payments">
+        <PropertyRef Name="apartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__users__apartment__4E88ABD4">
+    <End Role="apartments" Type="Self.apartments" Multiplicity="0..1" />
+    <End Role="users" Type="Self.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="apartments">
+        <PropertyRef Name="apartmentId" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="apartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__visits__apartmen__571DF1D5">
+    <End Role="apartments" Type="Self.apartments" Multiplicity="0..1" />
+    <End Role="visits" Type="Self.visits" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="apartments">
+        <PropertyRef Name="apartmentId" />
+      </Principal>
+      <Dependent Role="visits">
+        <PropertyRef Name="apartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TADSICondominiumModelStoreContainer">
+    <EntitySet Name="apartments" EntityType="Self.apartments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="buildings" EntityType="Self.buildings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="complains" EntityType="Self.complains" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fees" EntityType="Self.fees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="payments" EntityType="Self.payments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="visits" EntityType="Self.visits" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__apartment__build__4BAC3F29" Association="Self.FK__apartment__build__4BAC3F29">
+      <End Role="buildings" EntitySet="buildings" />
+      <End Role="apartments" EntitySet="apartments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__complains__userI__59FA5E80" Association="Self.FK__complains__userI__59FA5E80">
+      <End Role="users" EntitySet="users" />
+      <End Role="complains" EntitySet="complains" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fees__buildingId__5165187F" Association="Self.FK__fees__buildingId__5165187F">
+      <End Role="buildings" EntitySet="buildings" />
+      <End Role="fees" EntitySet="fees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__payments__apartm__5441852A" Association="Self.FK__payments__apartm__5441852A">
+      <End Role="apartments" EntitySet="apartments" />
+      <End Role="payments" EntitySet="payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__users__apartment__4E88ABD4" Association="Self.FK__users__apartment__4E88ABD4">
+      <End Role="apartments" EntitySet="apartments" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__visits__apartmen__571DF1D5" Association="Self.FK__visits__apartmen__571DF1D5">
+      <End Role="apartments" EntitySet="apartments" />
+      <End Role="visits" EntitySet="visits" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

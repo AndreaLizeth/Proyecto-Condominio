@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TADSICondominiumModelStoreContainer" CdmEntityContainer="TADSICondominiumEntities">
+    <EntitySetMapping Name="apartments">
+      <EntityTypeMapping TypeName="TADSICondominiumModel.apartments">
+        <MappingFragment StoreEntitySet="apartments">
+          <ScalarProperty Name="apartmentId" ColumnName="apartmentId" />
+          <ScalarProperty Name="buildingId" ColumnName="buildingId" />
+          <ScalarProperty Name="apartmentNumber" ColumnName="apartmentNumber" />
+          <ScalarProperty Name="residentsNumber" ColumnName="residentsNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="buildings">
+      <EntityTypeMapping TypeName="TADSICondominiumModel.buildings">
+        <MappingFragment StoreEntitySet="buildings">
+          <ScalarProperty Name="buildingId" ColumnName="buildingId" />
+          <ScalarProperty Name="buildingdName" ColumnName="buildingdName" />
+          <ScalarProperty Name="buildingDescription" ColumnName="buildingDescription" />
+          <ScalarProperty Name="buildingWaterReturnValue" ColumnName="buildingWaterReturnValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="complains">
+      <EntityTypeMapping TypeName="TADSICondominiumModel.complains">
+        <MappingFragment StoreEntitySet="complains">
+          <ScalarProperty Name="complainId" ColumnName="complainId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="complainDescription" ColumnName="complainDescription" />
+          <ScalarProperty Name="complainDate" ColumnName="complainDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fees">
+      <EntityTypeMapping TypeName="TADSICondominiumModel.fees">
+        <MappingFragment StoreEntitySet="fees">
+          <ScalarProperty Name="feeId" ColumnName="feeId" />
+          <ScalarProperty Name="buildingId" ColumnName="buildingId" />
+          <ScalarProperty Name="feeDescription" ColumnName="feeDescription" />
+          <ScalarProperty Name="feeValue" ColumnName="feeValue" />
+          <ScalarProperty Name="feeLimitDate" ColumnName="feeLimitDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="payments">
+      <EntityTypeMapping TypeName="TADSICondominiumModel.payments">
+        <MappingFragment StoreEntitySet="payments">
+          <ScalarProperty Name="paymentId" ColumnName="paymentId" />
+          <ScalarProperty Name="apartmentId" ColumnName="apartmentId" />
+          <ScalarProperty Name="paymentValue" ColumnName="paymentValue" />
+          <ScalarProperty Name="paymentType" ColumnName="paymentType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="TADSICondominiumModel.users">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="apartmentId" ColumnName="apartmentId" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="userLastName" ColumnName="userLastName" />
+          <ScalarProperty Name="userIdentificationCard" ColumnName="userIdentificationCard" />
+          <ScalarProperty Name="userEmail" ColumnName="userEmail" />
+          <ScalarProperty Name="userPassword" ColumnName="userPassword" />
+          <ScalarProperty Name="userType" ColumnName="userType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="visits">
+      <EntityTypeMapping TypeName="TADSICondominiumModel.visits">
+        <MappingFragment StoreEntitySet="visits">
+          <ScalarProperty Name="visitId" ColumnName="visitId" />
+          <ScalarProperty Name="apartmentId" ColumnName="apartmentId" />
+          <ScalarProperty Name="visitName" ColumnName="visitName" />
+          <ScalarProperty Name="visitLastName" ColumnName="visitLastName" />
+          <ScalarProperty Name="visitIdentificationCard" ColumnName="visitIdentificationCard" />
+          <ScalarProperty Name="visitDate" ColumnName="visitDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

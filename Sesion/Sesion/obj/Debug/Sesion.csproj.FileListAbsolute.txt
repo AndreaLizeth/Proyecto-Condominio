@@ -1,0 +1,15 @@
+C:\Users\jovv1\source\repos\Sesion\Sesion\bin\Debug\Sesion.exe.config
+C:\Users\jovv1\source\repos\Sesion\Sesion\bin\Debug\Sesion.exe
+C:\Users\jovv1\source\repos\Sesion\Sesion\bin\Debug\Sesion.pdb
+C:\Users\jovv1\source\repos\Sesion\Sesion\obj\Debug\Sesion.csprojAssemblyReference.cache
+C:\Users\jovv1\source\repos\Sesion\Sesion\obj\Debug\Sesion.Form1.resources
+C:\Users\jovv1\source\repos\Sesion\Sesion\obj\Debug\Sesion.Properties.Resources.resources
+C:\Users\jovv1\source\repos\Sesion\Sesion\obj\Debug\Sesion.csproj.GenerateResource.cache
+C:\Users\jovv1\source\repos\Sesion\Sesion\obj\Debug\Sesion.exe
+C:\Users\jovv1\source\repos\Sesion\Sesion\obj\Debug\Sesion.pdb
+C:\Users\jovv1\source\repos\Sesion\Sesion\bin\Debug\EntityFramework.dll
+C:\Users\jovv1\source\repos\Sesion\Sesion\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jovv1\source\repos\Sesion\Sesion\bin\Debug\EntityFramework.xml
+C:\Users\jovv1\source\repos\Sesion\Sesion\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jovv1\source\repos\Sesion\Sesion\obj\Debug\Sesion.csproj.CopyComplete
+C:\Users\jovv1\source\repos\Sesion\Sesion\obj\Debug\Sesion.Principal.resources
